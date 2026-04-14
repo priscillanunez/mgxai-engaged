@@ -1,0 +1,1414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MGXAI — Attribution Integrity for AI Commerce</title>
+    <meta name="description" content="MGXAI verifies who influenced the sale across affiliate and creator journeys. Precision attribution for AI-mediated commerce.">
+    <meta name="keywords" content="AI attribution, attribution integrity, affiliate attribution, creator economy attribution, AI-mediated commerce, agentic commerce attribution, ChatGPT shopping attribution, AI storefront attribution, proof of influence, last-click attribution problems, creator attribution tracking, affiliate commission disputes, verified attribution, AI-mediated attribution, multi-touch affiliate attribution">
+    <meta property="og:title" content="MGXAI — Attribution Integrity for AI-Mediated Commerce">
+    <meta property="og:description" content="MGXAI verifies who influenced the sale across affiliate and creator journeys. Precision attribution for AI-mediated commerce.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mgxai.com">
+    <meta property="og:site_name" content="MGXAI">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="MGXAI — Attribution Integrity for AI-Mediated Commerce">
+    <meta name="twitter:description" content="Precision Attribution Integrity Infrastructure for AI-mediated affiliate and creator commerce.">
+    <link rel="canonical" href="https://mgxai.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "MGXAI",
+        "url": "https://mgxai.com",
+        "description": "Attribution infrastructure for AI-mediated affiliate and creator commerce."
+    }
+    </script>
+
+    <!-- WebSite Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "MGXAI",
+        "url": "https://mgxai.com",
+        "description": "Attribution integrity for AI-mediated discoveries. Verifiable proof affiliate and creator journeys.",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://mgxai.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is AI attribution?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "AI attribution integrity is the process of verifying which affiliates, creators, and channels actually influenced a sale when AI assistants, chatbots, and recommendation engines mediate the buyer journey."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Why does last-click attribution fail in AI commerce?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Last-click attribution assigns 100% of credit to the final touchpoint. When AI assistants mediate the journey, the affiliates and creators who actually influenced the buyer get zero credit."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What does MGXAI replace?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "MGXAI is designed to work adjacent to, alongside publishers, partners, affiliate, creator-commerce, attribution, ecommerce intelligence, and agentic commerce platforms, including impact.com, PartnerStack, Levanta, Moonpull Partners, Rockerbox, Northbeam, Triple Whale, Awin, Rakuten Advertising, Shopify, and related ecosystem players."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Who is MGXAI built for?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "MGXAI serves affiliate network managers, creator economy platforms, brand and performance marketing teams, and AI commerce companies that need verified attribution in AI-mediated commerce."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #F0EFEC;
+            --bg-dark: #2B2C30;
+            --primary: #922F39;
+            --secondary: #922F39;
+            --link: #922F39;
+            --link-hover: #922F39;
+            --text: #2B2C30;
+            --text-secondary: #656667;
+            --accent: #938B78;
+            --tag: #90667B;
+            --white: #FFFFFF;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ── NAV ───────────────────────────────── */
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(240, 239, 236, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(43, 44, 48, 0.08);
+            padding: 0 2rem;
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+        }
+
+        .nav-logo {
+            font-size: 1.25rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--link-hover);
+        }
+
+        .nav-cta {
+            background: var(--primary);
+            color: var(--white) !important;
+            padding: 0.5rem 1.25rem;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: opacity 0.2s;
+        }
+
+        .nav-cta:hover {
+            opacity: 0.9;
+            color: var(--white) !important;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .mobile-menu-btn span {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background: var(--text);
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+
+        /* ── SECTIONS ──────────────────────────── */
+
+        section {
+            padding: 6rem 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-label {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--tag);
+            background: rgba(144, 102, 123, 0.1);
+            padding: 0.35rem 0.85rem;
+            border-radius: 100px;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            line-height: 1.15;
+            color: var(--text);
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            max-width: 640px;
+            line-height: 1.7;
+        }
+
+        /* ── HERO ──────────────────────────────── */
+
+        .hero {
+            padding: 10rem 2rem 6rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -40%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(146, 47, 57, 0.06) 0%, rgba(55, 92, 104, 0.04) 40%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero-label {
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--accent);
+            letter-spacing: 0.06em;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            line-height: 1.08;
+            max-width: 800px;
+            margin: 0 auto 1.5rem;
+            color: var(--text);
+        }
+
+        .hero h1 em {
+            font-style: normal;
+            color: var(--primary);
+        }
+
+        .hero-sub {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.7;
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--primary);
+            color: var(--white);
+            padding: 0.85rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: opacity 0.2s, transform 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: transparent;
+            color: var(--secondary);
+            padding: 0.85rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            border: 2px solid var(--secondary);
+            transition: background 0.2s, color 0.2s, transform 0.2s;
+            cursor: pointer;
+        }
+
+        .btn-secondary:hover {
+            background: var(--secondary);
+            color: var(--white);
+            transform: translateY(-1px);
+        }
+
+        .hero-proof {
+            margin-top: 3.5rem;
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-stat {
+            text-align: center;
+        }
+
+        .hero-stat-number {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .hero-stat-label {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-top: 0.25rem;
+        }
+
+        /* ── PROBLEM ───────────────────────────── */
+
+        .problem {
+            background: var(--bg-dark);
+            color: var(--white);
+        }
+
+        .problem .section-label {
+            color: var(--tag);
+            background: rgba(144, 102, 123, 0.2);
+        }
+
+        .problem .section-title {
+            color: var(--white);
+        }
+
+        .problem .section-subtitle {
+            color: rgba(255, 255, 255, 0.65);
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .problem-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: border-color 0.3s;
+        }
+
+        .problem-card:hover {
+            border-color: rgba(146, 47, 57, 0.4);
+        }
+
+        .problem-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+            background: rgba(146, 47, 57, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.25rem;
+            font-size: 1.25rem;
+        }
+
+        .problem-card h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: var(--white);
+        }
+
+        .problem-card p {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.65;
+        }
+
+        /* ── HOW IT WORKS ──────────────────────── */
+
+        .how-it-works {
+            background: var(--bg);
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+            position: relative;
+        }
+
+        .steps::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: calc(16.66% + 1rem);
+            right: calc(16.66% + 1rem);
+            height: 2px;
+            background: linear-gradient(to right, var(--accent), var(--secondary), var(--primary));
+            opacity: 0.3;
+        }
+
+        .step {
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin: 0 auto 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .step:nth-child(1) .step-number {
+            background: rgba(147, 139, 120, 0.15);
+            color: var(--accent);
+        }
+
+        .step:nth-child(2) .step-number {
+            background: rgba(55, 92, 104, 0.12);
+            color: var(--secondary);
+        }
+
+        .step:nth-child(3) .step-number {
+            background: rgba(146, 47, 57, 0.12);
+            color: var(--primary);
+        }
+
+        .step h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .step p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.65;
+            max-width: 320px;
+            margin: 0 auto;
+        }
+
+        /* ── WHO WE SERVE ──────────────────────── */
+
+        .audience {
+            background: var(--white);
+        }
+
+        .audience-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .audience-card {
+            background: var(--bg);
+            border-radius: 12px;
+            padding: 2rem;
+            border: 1px solid rgba(43, 44, 48, 0.06);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .audience-card:hover {
+            border-color: rgba(55, 92, 104, 0.2);
+            box-shadow: 0 4px 24px rgba(43, 44, 48, 0.06);
+        }
+
+        .audience-tag {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--tag);
+            background: rgba(144, 102, 123, 0.1);
+            padding: 0.3rem 0.7rem;
+            border-radius: 100px;
+            margin-bottom: 1rem;
+        }
+
+        .audience-card h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .audience-card .pain {
+            font-size: 0.95rem;
+            color: var(--primary);
+            font-weight: 500;
+            margin-bottom: 0.75rem;
+        }
+
+        .audience-card p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.65;
+        }
+
+        .audience-card ul {
+            list-style: none;
+            margin-top: 0.75rem;
+        }
+
+        .audience-card ul li {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            padding: 0.25rem 0;
+            padding-left: 1.25rem;
+            position: relative;
+        }
+
+        .audience-card ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.65rem;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--accent);
+        }
+
+        /* ── INSIGHTS / BLOG ───────────────────── */
+
+        .insights {
+            background: var(--bg);
+        }
+
+        .insights-header {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .insights-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .insight-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 2rem;
+            border: 1px solid rgba(43, 44, 48, 0.06);
+            text-decoration: none;
+            color: inherit;
+            transition: border-color 0.3s, box-shadow 0.3s, transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .insight-card:hover {
+            border-color: rgba(55, 92, 104, 0.2);
+            box-shadow: 0 8px 32px rgba(43, 44, 48, 0.08);
+            transform: translateY(-2px);
+        }
+
+        .insight-meta {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .insight-type {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            padding: 0.25rem 0.6rem;
+            border-radius: 100px;
+        }
+
+        .insight-type.pillar {
+            color: var(--primary);
+            background: rgba(146, 47, 57, 0.08);
+        }
+
+        .insight-type.blog {
+            color: var(--secondary);
+            background: rgba(55, 92, 104, 0.08);
+        }
+
+        .insight-pillar {
+            font-size: 0.75rem;
+            color: var(--accent);
+            font-weight: 500;
+        }
+
+        .insight-card h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            line-height: 1.35;
+            color: var(--text);
+        }
+
+        .insight-card p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.65;
+            flex-grow: 1;
+        }
+
+        .insight-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            margin-top: 1.25rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--link);
+            transition: color 0.2s;
+        }
+
+        .insight-link:hover {
+            color: var(--link-hover);
+        }
+
+        .insight-link svg {
+            width: 16px;
+            height: 16px;
+            transition: transform 0.2s;
+        }
+
+        .insight-card:hover .insight-link svg {
+            transform: translateX(3px);
+        }
+
+        /* ── CTA ───────────────────────────────── */
+
+        .cta-section {
+            background: var(--bg-dark);
+            text-align: center;
+        }
+
+        .cta-section .section-label {
+            color: var(--tag);
+            background: rgba(144, 102, 123, 0.2);
+        }
+
+        .cta-section .section-title {
+            color: var(--white);
+            max-width: 600px;
+            margin: 0 auto 1rem;
+        }
+
+        .cta-section .section-subtitle {
+            color: rgba(255, 255, 255, 0.6);
+            margin: 0 auto 2.5rem;
+            text-align: center;
+        }
+
+        .cta-form {
+            display: flex;
+            gap: 0.75rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .cta-form input {
+            flex: 1;
+            min-width: 240px;
+            padding: 0.85rem 1.25rem;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.06);
+            color: var(--white);
+            font-size: 0.95rem;
+            font-family: inherit;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .cta-form input::placeholder {
+            color: rgba(255, 255, 255, 0.35);
+        }
+
+        .cta-form input:focus {
+            border-color: rgba(146, 47, 57, 0.6);
+        }
+
+        .cta-note {
+            margin-top: 1rem;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.35);
+        }
+
+        /* ── FOOTER ────────────────────────────── */
+
+        footer {
+            background: var(--bg-dark);
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 3rem 2rem;
+        }
+
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-logo {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--white);
+            letter-spacing: -0.02em;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.45);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+        }
+
+        .footer-copy {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        /* ── RESPONSIVE ────────────────────────── */
+
+        @media (max-width: 1024px) {
+            .problem-grid,
+            .steps {
+                grid-template-columns: 1fr;
+                max-width: 480px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .steps::before {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 4rem 1.25rem;
+            }
+
+            .hero {
+                padding: 8rem 1.25rem 4rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .audience-grid,
+            .insights-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-proof {
+                gap: 2rem;
+            }
+
+            .insights-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                text-align: center;
+                gap: 1.5rem;
+            }
+
+            .footer-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+
+        /* ── ANIMATION ─────────────────────────── */
+
+        .fade-up {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+<style>.asw-menu-btn{bottom:50% !important;transform:translateY(50%) !important;}</style>
+</head>
+<body>
+
+<!-- ── NAV ──────────────────────────────────── -->
+<nav>
+    <div class="nav-inner">
+        <a href="#" class="nav-logo">MGXAI</a>
+        <ul class="nav-links">
+            <li><a href="#problem">Problem</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#who-we-serve">Who We Serve</a></li>
+            <li><a href="#insights">Insights</a></li>
+            <li><a href="tools/ai-crawl-checker.html">AI Crawl Checker</a></li>
+            <li><a href="tools/discussions.html">Community</a></li><li><a href="tools/discussions.html#reviews">Reviews</a></li>
+            <li><a href="privacy.html">Privacy</a></li><li><a href="#request-access" class="nav-cta">Request Access</a></li>
+        </ul>
+        <button class="mobile-menu-btn" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('show')">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- ── HERO ─────────────────────────────────── -->
+<section class="hero" id="hero">
+    <div class="container">
+        <div class="hero-label">Attribution Infrastructure for the AI Era</div>
+        <h1 class="fade-up">Know Who Actually <em>Influenced</em> the Sale</h1>
+        <p class="hero-sub fade-up">MGXAI is AI attribution integrity infrastructure that verifies influence across affiliate and creator journeys so you pay the right people, not the last click.</p>
+        <div class="hero-ctas fade-up">
+            <a href="#request-access" class="btn-primary">Request Access</a>
+            <a href="tools/ai-crawl-checker.html" class="btn-secondary">Free AI Crawl Checker</a>
+        </div>
+        <div class="hero-proof fade-up">
+            <div class="hero-stat">
+                <span class="hero-stat-number">70%</span>
+                <span class="hero-stat-label">of AI conversions misattributed</span>
+            </div>
+            <div class="hero-stat">
+                <span class="hero-stat-number">?</span>
+                <span class="hero-stat-label">How much is paid to the individual who originally created the demand?</span>
+            </div>
+            <div class="hero-stat">
+                <span class="hero-stat-number">YES</span>
+                <span class="hero-stat-label">Legacy tools are blind to AI.</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── THE PROBLEM WE SOLVE ────────────────── -->
+<section class="problem" id="problem">
+    <div class="container">
+        <span class="section-label">The Problem</span>
+        <h2 class="section-title fade-up">Attribution Breaks When AI Mediates the Sale</h2>
+        <p class="section-subtitle fade-up">GA4, last-click models, and legacy affiliate platforms were not built for a world where AI assistants guide purchase decisions. The result: broken payouts, lost trust, and wasted spend.</p>
+
+        <div class="problem-grid">
+            <div class="problem-card fade-up">
+                <div class="problem-icon">
+                    <svg width="24" height="24" fill="none" stroke="rgba(146,47,57,0.9)" stroke-width="2" stroke-linecap="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/><circle cx="12" cy="12" r="4"/></svg>
+                </div>
+                <h3>Last-Click Lies</h3>
+                <p>Last-click attribution assigns 100% of credit to the final touchpoint. Affiliates and creators who actually influenced the buyer get nothing. You optimize for the wrong signal.</p>
+            </div>
+            <div class="problem-card fade-up">
+                <div class="problem-icon">
+                    <svg width="24" height="24" fill="none" stroke="rgba(146,47,57,0.9)" stroke-width="2" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M7 10h2M11 10h2M15 10h2" opacity="0.5"/></svg>
+                </div>
+                <h3>AI Blind Spots</h3>
+                <p>When ChatGPT recommends a product or an AI assistant compares options, there is no click trail. Traditional tools cannot see the influence. The attribution gap grows with every AI-mediated journey.</p>
+            </div>
+            <div class="problem-card fade-up">
+                <div class="problem-icon">
+                    <svg width="24" height="24" fill="none" stroke="rgba(146,47,57,0.9)" stroke-width="2" stroke-linecap="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M9 9h.01M15 9h.01M8 14s1.5 2 4 2 4-2 4-2" opacity="0.5"/></svg>
+                </div>
+                <h3>Commission Disputes</h3>
+                <p>Inaccurate attribution leads to wrong payouts. Affiliates lose trust. Creators leave. Networks lose partners. The entire ecosystem erodes when attribution data cannot be verified.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── HOW IT WORKS ─────────────────────────── -->
+<section class="how-it-works" id="how-it-works">
+    <div class="container">
+        <span class="section-label">How It Works</span>
+        <h2 class="section-title fade-up">Three Steps to Verified Attribution</h2>
+        <p class="section-subtitle fade-up">MGXAI maps influence across the full journey — including AI-mediated touchpoints that legacy tools miss entirely.</p>
+
+        <div class="steps">
+            <div class="step fade-up">
+                <div class="step-number">1</div>
+                <h3>Connect</h3>
+                <p>Integrate MGXAI with your affiliate network, creator platform, or marketing stack. One API. No rip-and-replace.</p>
+            </div>
+            <div class="step fade-up">
+                <div class="step-number">2</div>
+                <h3>Map</h3>
+                <p>MGXAI tracks every touchpoint in the buyer journey — including AI-mediated recommendations, chatbot interactions, and creator content that traditional tools cannot see.</p>
+            </div>
+            <div class="step fade-up">
+                <div class="step-number">3</div>
+                <h3>Verify &amp; Pay</h3>
+                <p>Get the ground truth on who influenced the sale. Defensible attribution data with verified proof of influence so you pay the right people with confidence.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── WHO WE SERVE ─────────────────────────── -->
+<section class="audience" id="who-we-serve">
+    <div class="container">
+        <span class="section-label">Who We Serve</span>
+        <h2 class="section-title fade-up">Built for Teams That Demand Accuracy</h2>
+        <p class="section-subtitle fade-up">If you manage affiliate or creator programs and need attribution you can trust, MGXAI is built for you.</p>
+
+        <div class="audience-grid">
+            <div class="audience-card fade-up">
+                <span class="audience-tag">Networks</span>
+                <h3>Affiliate Network Managers</h3>
+                <div class="pain">Paying the wrong affiliates due to last-click bias</div>
+                <p>Run large affiliate programs with hundreds of partners. Need verifiable proof of who drove the sale — not who happened to be the last click.</p>
+                <ul>
+                    <li>Accuracy and fraud prevention</li>
+                    <li>Defensible commission payouts</li>
+                    <li>Partner trust and retention</li>
+                </ul>
+            </div>
+            <div class="audience-card fade-up">
+                <span class="audience-tag">Creators</span>
+                <h3>Creator Economy Platforms</h3>
+                <div class="pain">Cannot prove creator impact in AI-mediated journeys</div>
+                <p>Manage creator partnerships and monetization at scale. Need to prove creator influence when AI assistants and chatbots are part of the purchase path.</p>
+                <ul>
+                    <li>Accurate creator payouts</li>
+                    <li>Creator trust and retention</li>
+                    <li>Verified influence data</li>
+                </ul>
+            </div>
+            <div class="audience-card fade-up">
+                <span class="audience-tag">Brands</span>
+                <h3>Performance Marketing Teams</h3>
+                <div class="pain">GA4 and last-click miss AI-mediated touchpoints</div>
+                <p>Run affiliate and creator campaigns at scale. Need clean attribution data to optimize spend and justify budgets with data that reflects reality.</p>
+                <ul>
+                    <li>ROAS and channel efficiency</li>
+                    <li>Budget justification</li>
+                    <li>Real optimization signals</li>
+                </ul>
+            </div>
+            <div class="audience-card fade-up">
+                <span class="audience-tag">AI Commerce</span>
+                <h3>AI Commerce &amp; Tech Companies</h3>
+                <div class="pain">No tool verifies influence across AI journeys</div>
+                <p>Building AI shopping assistants, recommendation engines, or chatbot commerce. Need Attribution Integrity Infrastructure that works natively in AI-mediated commerce.</p>
+                <ul>
+                    <li>Infrastructure reliability</li>
+                    <li>API-first integration</li>
+                    <li>Enterprise-grade scale</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── INSIGHTS / BLOG ──────────────────────── -->
+<section class="insights" id="insights">
+    <div class="container">
+        <div class="insights-header">
+            <div>
+                <span class="section-label">Insights</span>
+                <h2 class="section-title fade-up">The MGXAI Intelligence Hub</h2>
+                <p class="section-subtitle fade-up">Research, analysis, and practical guides on attribution integrity in AI-mediated commerce.</p>
+            </div>
+        </div>
+
+        <div class="insights-grid">
+            <a href="blog/what-is-ai-attribution.html" class="insight-card fade-up">
+                <div class="insight-meta">
+                    <span class="insight-type pillar">Pillar</span>
+                    <span class="insight-pillar">AI-Mediated Commerce</span>
+                </div>
+                <h3>What Is AI Attribution?</h3>
+                <p>The definitive guide to attribution in AI-mediated commerce. What it is, why it matters, and how it differs from traditional attribution models.</p>
+                <span class="insight-link">Read the guide <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+            </a>
+            <a href="blog/complete-guide-affiliate-attribution.html" class="insight-card fade-up">
+                <div class="insight-meta">
+                    <span class="insight-type pillar">Pillar</span>
+                    <span class="insight-pillar">Affiliate &amp; Creator Economy</span>
+                </div>
+                <h3>The Complete Guide to Affiliate Attribution</h3>
+                <p>Everything affiliate managers need to know about attribution — models, common failures, and how to build a system that pays the right partners.</p>
+                <span class="insight-link">Read the guide <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+            </a>
+            <a href="blog/why-last-click-attribution-fails-ai-commerce.html" class="insight-card fade-up">
+                <div class="insight-meta">
+                    <span class="insight-type blog">Article</span>
+                    <span class="insight-pillar">Attribution Integrity</span>
+                </div>
+                <h3>Why Last-Click Attribution Fails in AI Commerce</h3>
+                <p>Last-click assigns all credit to the final touchpoint. In AI-mediated journeys, that means the affiliates and creators who actually drove the sale get nothing.</p>
+                <span class="insight-link">Read the article <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+            </a>
+            <a href="blog/how-ai-assistants-breaking-traditional-attribution.html" class="insight-card fade-up">
+                <div class="insight-meta">
+                    <span class="insight-type blog">Article</span>
+                    <span class="insight-pillar">AI-Mediated Commerce</span>
+                </div>
+                <h3>How AI Assistants Are Breaking Traditional Attribution</h3>
+                <p>When ChatGPT recommends a product, who gets credit? A concrete look at three scenarios where AI makes traditional attribution invisible.</p>
+                <span class="insight-link">Read the article <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ── CTA ──────────────────────────────────── -->
+<section class="cta-section" id="request-access">
+    <div class="container">
+        <span class="section-label">Request Access</span>
+        <h2 class="section-title fade-up">Stop Paying Based on Broken Data</h2>
+        <p class="section-subtitle fade-up">MGXAI gives you the ground truth on who influenced the sale. Request access and be first to see attribution integrity in action.</p>
+        <form class="cta-form fade-up" onsubmit="event.preventDefault();">
+            <input type="email" placeholder="Your work email" required aria-label="Email address">
+            <button type="submit" class="btn-primary">Request Access</button>
+        </form>
+        <p class="cta-note fade-up"> We will reach out to schedule a walkthrough.</p>
+    </div>
+</section>
+
+<!-- ── FOOTER ───────────────────────────────── -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-logo">MGXAI</div>
+        <ul class="footer-links">
+            <li><a href="#problem">Problem</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#who-we-serve">Who We Serve</a></li>
+            <li><a href="#insights">Insights</a></li>
+            <li><a href="tools/ai-crawl-checker.html">AI Crawl Checker</a></li>
+            <li><a href="tools/discussions.html#reviews">Reviews</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="#request-access">Request Access</a></li>
+        </ul>
+        <div class="footer-copy">&copy;2022-2026 MGXAI - Attribution Integrity. All rights reserved. AI-assisted development </div>
+    </div>
+</footer>
+
+<!-- ── SCROLL ANIMATION ────────────────────── -->
+<script>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+
+<!-- ── COOKIE CONSENT BANNER ─────────────────── -->
+<!-- Consent-gated tracking: nothing fires until visitor clicks Accept -->
+<style>
+  .mgxai-consent-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #111111;
+    color: #e0e0e0;
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    z-index: 10000;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.4);
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+  }
+  .mgxai-consent-banner.visible {
+    transform: translateY(0);
+  }
+  .mgxai-consent-banner a {
+    color: #d4a017;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .mgxai-consent-banner a:hover {
+    color: #f0b429;
+  }
+  .mgxai-consent-text {
+    flex: 1;
+    margin-right: 12px;
+  }
+  .mgxai-consent-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+  }
+  .mgxai-consent-btn {
+    padding: 8px 20px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    letter-spacing: 0.02em;
+  }
+  .mgxai-btn-decline {
+    background: transparent;
+    border: 1px solid #555;
+    color: #ccc;
+  }
+  .mgxai-btn-decline:hover {
+    border-color: #999;
+    color: #fff;
+  }
+  .mgxai-btn-accept {
+    background: #ffffff;
+    border: 1px solid #ffffff;
+    color: #111111;
+  }
+  .mgxai-btn-accept:hover {
+    background: #d4a017;
+    border-color: #d4a017;
+    color: #111111;
+  }
+  .mgxai-btn-close {
+    background: none;
+    border: none;
+    color: #999;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 4px 8px;
+    line-height: 1;
+    transition: color 0.2s ease;
+  }
+  .mgxai-btn-close:hover {
+    color: #fff;
+  }
+  @media (max-width: 640px) {
+    .mgxai-consent-banner {
+      flex-direction: column;
+      padding: 16px 18px;
+      gap: 14px;
+    }
+    .mgxai-consent-text {
+      margin-right: 0;
+      font-size: 13px;
+    }
+    .mgxai-consent-buttons {
+      width: 100%;
+      justify-content: flex-end;
+    }
+  }
+</style>
+
+<div class="mgxai-consent-banner" id="mgxaiConsentBanner" role="dialog" aria-label="Cookie consent">
+  <div class="mgxai-consent-text">
+    We use cookies on our website to see how you interact with it. By accepting, you agree to our use of such cookies.
+    <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a>.
+  </div>
+  <div class="mgxai-consent-buttons">
+    <button class="mgxai-consent-btn mgxai-btn-decline" id="mgxaiDecline">Decline</button>
+    <button class="mgxai-consent-btn mgxai-btn-accept" id="mgxaiAccept">Accept</button>
+    <button class="mgxai-btn-close" id="mgxaiClose" aria-label="Close consent banner">&times;</button>
+  </div>
+</div>
+
+<script>
+(function() {
+  'use strict';
+  function getCookie(name) {
+    var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+    return match ? match[2] : null;
+  }
+  function setCookie(name, value, days) {
+    var expires = '';
+    if (days) {
+      var date = new Date();
+      date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+      expires = '; expires=' + date.toUTCString();
+    }
+    document.cookie = name + '=' + value + expires + '; path=/; SameSite=Lax';
+  }
+  var consent = getCookie('mgxai_consent');
+  if (consent === 'true') {
+    window.dispatchEvent(new Event('mgxai-consent-granted'));
+    return;
+  }
+  if (consent === 'false') {
+    return;
+  }
+  var banner = document.getElementById('mgxaiConsentBanner');
+  setTimeout(function() {
+    banner.classList.add('visible');
+  }, 800);
+  document.getElementById('mgxaiAccept').addEventListener('click', function() {
+    setCookie('mgxai_consent', 'true', 365);
+    banner.classList.remove('visible');
+    window.dispatchEvent(new Event('mgxai-consent-granted'));
+    setTimeout(function() { banner.remove(); }, 500);
+  });
+  document.getElementById('mgxaiDecline').addEventListener('click', function() {
+    setCookie('mgxai_consent', 'false', 365);
+    banner.classList.remove('visible');
+    setTimeout(function() { banner.remove(); }, 500);
+  });
+  document.getElementById('mgxaiClose').addEventListener('click', function() {
+    setCookie('mgxai_consent', 'false', 365);
+    banner.classList.remove('visible');
+    setTimeout(function() { banner.remove(); }, 500);
+  });
+})();
+</script>
+
+<!-- ── VISITOR ACTIVITY TRACKING (consent-gated) ── -->
+<script>
+(function(){
+  "use strict";
+
+  // This function collects all 18 data points and sends them to the API
+  function trackVisit(){
+    // ── Journey ID (persistent across visits via localStorage) ──
+    var journeyId = null;
+    try {
+      journeyId = localStorage.getItem("mgxai_journey_id");
+      if(!journeyId){
+        journeyId = "jrn_" + Date.now().toString(36) + "_" + Math.random().toString(36).substr(2,9);
+        localStorage.setItem("mgxai_journey_id", journeyId);
+      }
+    } catch(e){ journeyId = "jrn_no_storage"; }
+
+    // ── Session ID (unique per page load) ──
+    var sessionId = "ses_" + Date.now().toString(36) + "_" + Math.random().toString(36).substr(2,9);
+
+    // ── UTM parameters ──
+    var params = new URLSearchParams(window.location.search);
+    var utmSource = params.get("utm_source") || "";
+    var utmMedium = params.get("utm_medium") || "";
+    var utmCampaign = params.get("utm_campaign") || "";
+
+    // ── Device type ──
+    var width = window.innerWidth;
+    var deviceType = "desktop";
+    if(width <= 480){ deviceType = "mobile"; }
+    else if(width <= 1024){ deviceType = "tablet"; }
+
+    // ── Browser detection ──
+    var ua = navigator.userAgent;
+    var browser = "Unknown";
+    if(ua.indexOf("Firefox") > -1){ browser = "Firefox"; }
+    else if(ua.indexOf("Edg") > -1){ browser = "Edge"; }
+    else if(ua.indexOf("Chrome") > -1){ browser = "Chrome"; }
+    else if(ua.indexOf("Safari") > -1){ browser = "Safari"; }
+    else if(ua.indexOf("Opera") > -1 || ua.indexOf("OPR") > -1){ browser = "Opera"; }
+
+    // ── Operating system ──
+    var os = "Unknown";
+    if(ua.indexOf("Mac") > -1){ os = "macOS"; }
+    else if(ua.indexOf("Win") > -1){ os = "Windows"; }
+    else if(ua.indexOf("Linux") > -1){ os = "Linux"; }
+    else if(ua.indexOf("Android") > -1){ os = "Android"; }
+    else if(ua.indexOf("iPhone") > -1 || ua.indexOf("iPad") > -1){ os = "iOS"; }
+
+    // ── Build payload (all 18 data points) ──
+    var payload = {
+      page_viewed: window.location.pathname,
+      page_title: document.title,
+      referrer: document.referrer || "",
+      utm_source: utmSource,
+      utm_medium: utmMedium,
+      utm_campaign: utmCampaign,
+      device_type: deviceType,
+      browser: browser,
+      operating_system: os,
+      screen_resolution: screen.width + "x" + screen.height,
+      language: navigator.language || "",
+      session_id: sessionId,
+      journey_id: journeyId,
+      local_time: new Date().toISOString(),
+      timezone: Intl.DateTimeFormat().resolvedOptions().timeZone || ""
+    };
+
+    // ── Send to API ──
+    // Note: IP Hash, City, Region, Country are captured server-side (not from browser)
+    // That makes 15 from JavaScript + 4 from server = 19 total (Timestamp is server-side too)
+    fetch("https://mgxai.onrender.com/page-visit", {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify(payload),
+      keepalive: true
+    }).catch(function(err){
+      // Silent fail — tracking should never break the site
+      console.log("MGXAI tracking: ", err);
+    });
+  }
+
+  // ── Listen for consent ──
+  // Fires immediately if consent was already given (returning visitor)
+  // Or fires when they click Accept (new visitor)
+  window.addEventListener("mgxai-consent-granted", trackVisit);
+})();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/sienna-accessibility@latest/dist/sienna-accessibility.umd.js" defer></script>
+<script>
+(function(){
+  var c="#922F39";
+  var o=new MutationObserver(function(){
+    var b=document.querySelector(".asw-menu-btn");
+    var h=document.querySelector(".asw-menu-header");
+    if(b){b.style.setProperty("bottom","50%","important");b.style.setProperty("transform","translateY(50%)","important");b.style.setProperty("background","linear-gradient(96deg,"+c+" 0,"+c+" 100%)","important");b.style.setProperty("outline","5px solid "+c,"important");}
+    if(h){h.style.setProperty("background-color",c,"important");}
+    if(b&&h){o.disconnect();}
+  });
+  o.observe(document.body,{childList:true,subtree:true});
+})();
+</script>
+</body>
+</html>
+

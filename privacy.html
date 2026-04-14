@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy, Disclaimers &amp; Terms of Service | MGXAI</title>
+    <meta name="description" content="MGXAI Privacy Policy, Disclaimers, and Terms of Service. GDPR-compliant data handling for Attribution Integrity Infrastructure.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://try.mgx.ai/privacy.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #F0EFEC;
+            --bg-dark: #2B2C30;
+            --primary: #922F39;
+            --secondary: #922F39;
+            --link: #922F39;
+            --link-hover: #922F39;
+            --text: #2B2C30;
+            --text-secondary: #656667;
+            --accent: #938B78;
+            --white: #FFFFFF;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ── NAV ── */
+        nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 100;
+            background: rgba(240, 239, 236, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(43, 44, 48, 0.08);
+            padding: 0 2rem;
+        }
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+        }
+        .nav-logo {
+            font-size: 1.25rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            color: var(--text);
+            text-decoration: none;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover { color: var(--link-hover); }
+        .nav-cta {
+            background: var(--primary);
+            color: var(--white) !important;
+            padding: 0.5rem 1.25rem;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: opacity 0.2s;
+        }
+        .nav-cta:hover { opacity: 0.9; color: var(--white) !important; }
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+        .mobile-menu-btn span {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background: var(--text);
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+
+        /* ── HERO ── */
+        .hero {
+            background: var(--bg-dark);
+            padding: 7rem 2rem 3rem;
+            text-align: center;
+        }
+        .hero h1 {
+            color: var(--white);
+            font-size: 2rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            margin-bottom: 0.5rem;
+        }
+        .hero p {
+            color: var(--accent);
+            font-size: 0.95rem;
+            max-width: 560px;
+            margin: 0 auto;
+        }
+
+        /* ── CONTENT ── */
+        .policy-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 2rem 4rem;
+        }
+        .policy-content h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin: 2.5rem 0 0.75rem;
+            letter-spacing: -0.02em;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 0.4rem;
+        }
+        .policy-content h3 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--text);
+            margin: 1.5rem 0 0.5rem;
+        }
+        .policy-content p {
+            font-size: 0.9rem;
+            color: var(--text);
+            margin: 0 0 0.8rem;
+            line-height: 1.7;
+        }
+        .policy-content ul {
+            margin: 0 0 1rem;
+            padding-left: 1.5rem;
+        }
+        .policy-content li {
+            font-size: 0.9rem;
+            color: var(--text);
+            margin-bottom: 0.4rem;
+            line-height: 1.6;
+        }
+        .policy-content a {
+            color: var(--link);
+            text-decoration: underline;
+        }
+        .policy-content a:hover {
+            color: var(--link-hover);
+        }
+        .entity-box {
+            background: var(--white);
+            border: 1px solid rgba(43, 44, 48, 0.1);
+            border-left: 4px solid var(--primary);
+            border-radius: 6px;
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .entity-box p {
+            margin: 0 0 0.4rem;
+        }
+        .entity-box strong {
+            color: var(--primary);
+        }
+        .patent-notice {
+            background: #fffdf5;
+            border: 1px solid rgba(212, 160, 23, 0.3);
+            border-left: 4px solid #d4a017;
+            border-radius: 6px;
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .patent-notice p {
+            margin: 0 0 0.6rem;
+        }
+        .patent-notice p:last-child {
+            margin-bottom: 0;
+        }
+        .effective-date {
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(43, 44, 48, 0.1);
+        }
+
+        /* ── TABLE OF CONTENTS ── */
+        .toc {
+            background: var(--white);
+            border: 1px solid rgba(43, 44, 48, 0.1);
+            border-radius: 8px;
+            padding: 1.5rem 2rem;
+            margin: 0 0 2rem;
+        }
+        .toc h3 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            margin: 0 0 0.75rem;
+            color: var(--text);
+        }
+        .toc ol {
+            margin: 0;
+            padding-left: 1.25rem;
+        }
+        .toc li {
+            font-size: 0.85rem;
+            margin-bottom: 0.35rem;
+        }
+        .toc a {
+            color: var(--link);
+            text-decoration: none;
+        }
+        .toc a:hover {
+            color: var(--link-hover);
+            text-decoration: underline;
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            background: var(--bg-dark);
+            padding: 3rem 2rem;
+        }
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .footer-logo {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: var(--white);
+        }
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+        .footer-links a {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.8rem;
+        }
+        .footer-links a:hover { color: var(--white); }
+        .footer-copy {
+            color: var(--accent);
+            font-size: 0.75rem;
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        /* ── MOBILE ── */
+        @media (max-width: 768px) {
+            .hero { padding: 7rem 1.25rem 2rem; }
+            .hero h1 { font-size: 1.5rem; }
+            .policy-content { padding: 2rem 1.25rem 3rem; }
+            .nav-links { display: none; }
+            .nav-links.show {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 64px; left: 0; right: 0;
+                background: rgba(240, 239, 236, 0.98);
+                padding: 1rem 2rem;
+                gap: 0.75rem;
+                border-bottom: 1px solid rgba(43, 44, 48, 0.08);
+            }
+            .mobile-menu-btn { display: block; }
+            .footer-inner {
+                flex-direction: column;
+                text-align: center;
+                gap: 1.5rem;
+            }
+            .footer-links { flex-wrap: wrap; justify-content: center; }
+        }
+    </style>
+<style>.asw-menu-btn{bottom:50% !important;transform:translateY(50%) !important;}</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav>
+    <div class="nav-inner">
+        <a href="https://try.mgx.ai" class="nav-logo">MGXAI</a>
+        <ul class="nav-links">
+            <li><a href="https://try.mgx.ai">Home</a></li>
+            <li><a href="https://try.mgx.ai/tools/ai-crawl-checker.html">AI Crawl Checker</a></li>
+            <li><a href="https://try.mgx.ai/tools/discussions.html">Community</a></li>
+            <li><a href="https://try.mgx.ai/tools/discussions.html#reviews">Reviews</a></li>
+            <li><a href="https://try.mgx.ai#request-access" class="nav-cta">Request Access</a></li>
+        </ul>
+        <button class="mobile-menu-btn" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('show')">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- ── HERO ── -->
+<div class="hero">
+    <h1>Privacy Policy, Disclaimers &amp; Terms of Service</h1>
+    <p>How MGXAI collects, uses, and protects your data. Full transparency in every detail.</p>
+</div>
+
+<!-- ── CONTENT ── -->
+<div class="policy-content">
+
+    <!-- TABLE OF CONTENTS -->
+    <div class="toc">
+        <h3>Contents</h3>
+        <ol>
+            <li><a href="#entities">Corporate Entities, Affiliations &amp; Service Description</a></li>
+            <li><a href="#privacy">Privacy Policy</a></li>
+            <li><a href="#data-collection">Information We Collect</a></li>
+            <li><a href="#data-use">How We Use Your Information</a></li>
+            <li><a href="#data-sharing">Sharing Your Information</a></li>
+            <li><a href="#data-storage">Data Storage &amp; Security</a></li>
+            <li><a href="#gdpr">Your Privacy Rights (GDPR &amp; Global)</a></li>
+            <li><a href="#data-retention">Data Retention</a></li>
+            <li><a href="#cookies">Cookies &amp; Tracking</a></li>
+            <li><a href="#cca">CCA Disclosure: California Consumer Privacy Act (CCPA)</a></li>
+            <li><a href="#disclaimers">Disclaimers</a></li>
+            <li><a href="#tos">Terms of Service</a></li>
+            <li><a href="#contact">Contact &amp; Data Inquiries</a></li>
+            <li><a href="#accessibility">Accessibility</a></li>
+        </ol>
+    </div>
+
+    <!-- 1. CORPORATE ENTITIES -->
+    <h2 id="entities">1. Corporate Entities, Affiliations &amp; Service Description</h2>
+
+    <p>MGXAI Attribution Integrity LLC</p>
+    <p>Operating entity for MGXAI Attribution Integrity Infrastructure, including the AI Crawl Checker, origination evidence capture, and related services available at try.mgx.ai.</p>
+
+    <p>Throughout this document, "MGXAI," "we," "us," and "our" refer collectively to MGXAI Attribution Integrity Holdings LLC and MGXAI Attribution Integrity LLC, unless otherwise specified.</p>
+
+    <h3>Platform Agnostic Statement</h3>
+    <p>MGXAI is not an artificial intelligence company. MGXAI does not develop, train, or deploy AI models. MGXAI is Attribution Integrity Infrastructure, a platform-agnostic attribution integrity layer that operates across and alongside AI-mediated commerce environments regardless of which AI platforms, models, or assistants are involved in the buyer journey.</p>
+    <p>MGXAI may utilize AI-assisted development tools from multiple providers in the creation and operation of its Services. This does not constitute an endorsement of, affiliation with, or dependency on any single AI provider. MGXAI is not affiliated with, endorsed by, or officially connected with any AI platform provider, including but not limited to Anthropic, OpenAI, Google, Meta, or any of their subsidiaries or affiliates.</p>
+
+    <h3>Service Description</h3>
+    <p>MGXAI provides temporary use of online non-downloadable software and applications for:</p>
+    <ul>
+        <li>Generating referral carriers</li>
+        <li>Capturing origination evidence</li>
+        <li>Canonicalizing identifiers</li>
+        <li>Recording cryptographic commitments</li>
+        <li>Reconciling outcomes</li>
+        <li>Generating verifiable receipts for AI-mediated discovery</li>
+        <li>Providing privacy-preserving exports limited to permitted fields</li>
+    </ul>
+    <p>These services are delivered through MGXAI's Attribution Integrity Infrastructure and are designed to make attribution, commission, and payout decisions more accurate, auditable, and defensible across AI-mediated commerce.</p>
+
+    <!-- 2. PRIVACY POLICY -->
+    <h2 id="privacy">2. Privacy Policy</h2>
+    <p>MGXAI is committed to protecting the privacy of our users and community members. This privacy policy explains how we collect, use, store, and share information when you use our website at try.mgx.ai, our AI Crawl Checker tool, our API services, and community features (collectively, the "Services").</p>
+    <p>By accessing and using our Services, you agree to the collection, use, and sharing of your information as described in this privacy policy. If you do not agree with our policies and practices, please do not use our Services.</p>
+    <p><strong>Lawful Basis for Processing (GDPR Article 6):</strong> We process personal data under the following lawful bases: consent (where explicitly provided), contractual necessity (to deliver services you have requested), legitimate interest (to improve our services and communicate with you), and legal obligation (to comply with applicable laws).</p>
+
+    <!-- 3. INFORMATION WE COLLECT -->
+    <h2 id="data-collection">3. Information We Collect</h2>
+
+    <h3>Information You Provide Directly</h3>
+    <p>When you use the AI Crawl Checker, request access, or interact with our Services, we may collect information you provide directly, including your name, email address, website URL, and any other details you submit through our forms.</p>
+
+    <h3>Information Collected Automatically</h3>
+    <p>When you use our Services, we may automatically collect certain information to support our Attribution Integrity Infrastructure, including:</p>
+    <ul>
+        <li>IP address (stored as a one-way hash; we do not store raw IP addresses)</li>
+        <li>Browser user agent string</li>
+        <li>HTTP Referer header</li>
+        <li>document.referrer value</li>
+        <li>Landing page URL</li>
+        <li>Session identifiers (generated client-side, not linked to personal identity)</li>
+        <li>AI platform classification (e.g., whether you arrived via an AI assistant)</li>
+    </ul>
+
+    <h3>Information from Third Parties</h3>
+    <p>We may receive information from third-party service providers that support our Services, such as payment processors and community platforms (GitHub Discussions via Giscus).</p>
+
+    <!-- 4. HOW WE USE YOUR INFORMATION -->
+    <h2 id="data-use">4. How We Use Your Information</h2>
+    <p>We use the information we collect for the following purposes:</p>
+    <ul>
+        <li><strong>To provide and improve our Services:</strong> Including delivering AI crawlability audits, generating origination evidence, and improving the accuracy of our Attribution Integrity Infrastructure.</li>
+        <li><strong>To communicate with you:</strong> Responding to inquiries, providing service updates, and delivering requested reports or audit results.</li>
+        <li><strong>For research and development:</strong> Analyzing aggregated, anonymized usage patterns to improve and develop new features.</li>
+        <li><strong>For compliance and legal purposes:</strong> Complying with applicable laws and protecting the rights and safety of our users.</li>
+        <li><strong>For origination evidence capture:</strong> Recording verifiable evidence of how users arrive at our site to demonstrate the value of Attribution Integrity Infrastructure. This data is collected with confidence scoring and is never used to personally identify individual users.</li>
+    </ul>
+
+    <!-- 5. SHARING YOUR INFORMATION -->
+    <h2 id="data-sharing">5. Sharing Your Information</h2>
+    <p>We do not sell your personal information. We may share your information with the following parties only as necessary:</p>
+    <ul>
+        <li><strong>Service providers:</strong> Third-party providers who assist in operating our Services, including cloud hosting, data storage, payment processing, and community features. Each provider maintains its own privacy policy and data handling practices.</li>
+        <li><strong>Legal requirements:</strong> If required by law, regulation, or valid legal process.</li>
+        <li><strong>Business transfers:</strong> In the event of a merger, acquisition, or sale of assets, your information may be transferred to the successor entity. You will be notified of any such change.</li>
+    </ul>
+
+    <!-- 6. DATA STORAGE & SECURITY -->
+    <h2 id="data-storage">6. Data Storage &amp; Security</h2>
+    <p>Your data is stored using the following infrastructure:</p>
+    <ul>
+        <li><strong>Cloud Infrastructure:</strong> Your data is stored using secure cloud infrastructure with enterprise-grade encryption. Access is restricted to authorized personnel only. All credentials are stored as encrypted environment variables and are never committed to source code. No persistent user data is stored on API servers beyond what is required to fulfill your request.</li>
+        <li><strong>Payment Processing:</strong> Payment processing is handled entirely by a PCI DSS Level 1 certified payment processor. MGXAI does not store credit card numbers, bank account details, or other payment instrument data at any time.</li>
+        <li><strong>Community Discussions:</strong> Community discussions are hosted via GitHub Discussions on our public repository. Participation requires a GitHub account and is governed by GitHub's privacy policy.</li>
+    </ul>
+
+    <h3>Security Measures</h3>
+    <p>We implement the following security controls to protect your data:</p>
+    <ul>
+        <li>All API endpoints use HTTPS encryption in transit</li>
+        <li>Payment webhook signature verification on all payment events</li>
+        <li>IP addresses are stored only as one-way hashes (SHA-256); raw IPs are never retained</li>
+        <li>API credentials and secrets are stored as environment variables, never in source code</li>
+        <li>Backend code is maintained in a private repository with restricted access</li>
+        <li>Human-in-the-loop (HITL) approval is required for all automated agent actions</li>
+        <li>Principle of least privilege applied to all service accounts and API keys</li>
+    </ul>
+
+    <!-- 7. GDPR & GLOBAL RIGHTS -->
+    <h2 id="gdpr">7. Your Privacy Rights (GDPR &amp; Global)</h2>
+    <p>Regardless of your location, we extend the following rights to all users of our Services:</p>
+    <ul>
+        <li><strong>Right of Access (GDPR Article 15):</strong> You may request a copy of all personal data we hold about you.</li>
+        <li><strong>Right to Rectification (GDPR Article 16):</strong> You may request correction of any inaccurate personal data.</li>
+        <li><strong>Right to Erasure (GDPR Article 17):</strong> You may request deletion of your personal data ("right to be forgotten"). Upon receiving a verified deletion request, we will remove your data from all systems within 30 days.</li>
+        <li><strong>Right to Restrict Processing (GDPR Article 18):</strong> You may request that we limit how we process your data.</li>
+        <li><strong>Right to Data Portability (GDPR Article 20):</strong> You may request your data in a structured, commonly used, machine-readable format.</li>
+        <li><strong>Right to Object (GDPR Article 21):</strong> You may object to processing of your personal data for specific purposes, including direct marketing.</li>
+        <li><strong>Right to Withdraw Consent:</strong> Where processing is based on consent, you may withdraw consent at any time without affecting the lawfulness of prior processing.</li>
+        <li><strong>Right to Lodge a Complaint:</strong> You may file a complaint with a data protection authority if you believe your rights have been violated.</li>
+    </ul>
+    <p>To exercise any of these rights, contact us at <a href="mailto:Ops@MGX.AI">Ops@MGX.AI</a> with the subject line "Data Rights Request." We will respond within 30 days.</p>
+
+    <!-- 8. DATA RETENTION -->
+    <h2 id="data-retention">8. Data Retention</h2>
+    <p>We retain personal data only as long as necessary to fulfill the purposes for which it was collected:</p>
+    <ul>
+        <li><strong>AI Crawl Checker leads:</strong> Retained for 24 months from date of submission, then deleted unless an active service relationship exists.</li>
+        <li><strong>Payment records:</strong> Retained for the duration required by applicable tax and financial regulations (typically 7 years for US entities).</li>
+        <li><strong>Origination evidence:</strong> Retained for 36 months for attribution integrity research and audit purposes. IP hashes and user agent strings are anonymized and cannot be used to re-identify individuals.</li>
+        <li><strong>Community discussions:</strong> Governed by GitHub's data retention policies. You may delete your own posts at any time through GitHub.</li>
+    </ul>
+    <p>Upon receiving a verified deletion request, we will remove your personal data from all active systems within 30 days. Backup copies may persist for up to 90 days before automatic deletion.</p>
+
+    <!-- 9. COOKIES & TRACKING -->
+    <h2 id="cookies">9. Cookies &amp; Tracking</h2>
+    <p>MGXAI uses minimal tracking technologies:</p>
+    <ul>
+        <li><strong>localStorage:</strong> We use browser localStorage to maintain a Journey ID for origination evidence capture. This identifier is generated client-side and is not linked to your personal identity. You may clear it at any time by clearing your browser storage.</li>
+        <li><strong>No third-party advertising cookies:</strong> We do not use advertising cookies, retargeting pixels, or any third-party tracking for advertising purposes.</li>
+        <li><strong>No Google Analytics dependency:</strong> MGXAI does not rely on GA4 or similar analytics platforms as its system of record. If supplemental analytics are used, they will be disclosed here.</li>
+    </ul>
+
+    <!-- 10. CCA / CCPA -->
+    <h2 id="cca">10. CCA Disclosure: California Consumer Privacy Act (CCPA)</h2>
+    <p>We respect your privacy. MGXAI provides opt-in and opt-out options for all users, with specific rights for California residents under the California Consumer Privacy Act (CCPA). Thank you for trusting our communities.</p>
+
+    <h3>Your Rights Under the CCPA</h3>
+    <p>The California Consumer Privacy Act (CCPA) provides California residents with specific rights regarding how personal information is collected and treated. Under the legislation, California residents can choose to opt out of the "sale" of their personal information to third parties. Based on the CCPA definition, "sale" refers to data collection for the purpose of creating advertising and other communications.</p>
+    <p>As a California resident, you have the right to:</p>
+    <ul>
+        <li><strong>Right to Know:</strong> Request that we disclose what categories and specific pieces of personal information we have collected about you, the categories of sources from which the information was collected, the business purpose for collecting the information, and the categories of third parties with whom we share the information.</li>
+        <li><strong>Right to Delete:</strong> Request deletion of your personal information, subject to certain exceptions.</li>
+        <li><strong>Right to Opt-Out:</strong> Opt out of the "sale" of your personal information to third parties.</li>
+        <li><strong>Right to Non-Discrimination:</strong> You will not be discriminated against for exercising any of your CCPA rights.</li>
+    </ul>
+
+    <h3>"Do Not Sell My Information" for California Consumers</h3>
+    <p>MGXAI does not sell personal information as defined under the CCPA. We do not use advertising cookies, retargeting pixels, or share personal data with third parties for advertising purposes. However, if you wish to formally exercise your right to opt out, you may do so by contacting us directly.</p>
+
+    <h3>How to Opt Out</h3>
+    <p>By sending an opt-out email to <strong><a href="mailto:Ops@MGX.AI">Ops@MGX.AI</a></strong>, we will no longer collect or sell your personal information. This applies to both third parties and the data we collect to help personalize your experience on our website or through other communications.</p>
+    <p>To be eligible to opt out under the CCPA, you must be browsing from California.</p>
+    <p><strong>Email:</strong> <a href="mailto:Ops@MGX.AI">Ops@MGX.AI</a></p>
+
+    <h3>Opt-In &amp; Opt-Out for All Users</h3>
+    <p>Regardless of your location, MGXAI respects your right to control your personal data:</p>
+    <ul>
+        <li><strong>Opt-Out of Communications:</strong> You may opt out of marketing communications at any time by emailing <a href="mailto:Ops@MGX.AI">Ops@MGX.AI</a> or by following unsubscribe instructions in any communication.</li>
+        <li><strong>Opt-Out of Data Collection:</strong> You may request that we stop collecting your data by emailing <a href="mailto:Ops@MGX.AI">Ops@MGX.AI</a>. Note that opting out of data collection may limit your ability to use certain Services.</li>
+        <li><strong>Opt-In to Enhanced Services:</strong> Certain MGXAI features require explicit opt-in consent, including paid service tiers, origination evidence capture on your behalf, and community participation. These are never activated without your affirmative action.</li>
+    </ul>
+    <p>For more information about how we handle your personal data, refer to the <a href="#privacy">Privacy Policy</a> and <a href="#gdpr">GDPR Rights</a> sections of this document.</p>
+
+    <!-- 11. DISCLAIMERS -->
+    <h2 id="disclaimers">11. Disclaimers</h2>
+
+    <h3>General Disclaimer</h3>
+    <p>The information provided through MGXAI's Services is for informational and business purposes only. We strive for accuracy but make no warranties about the completeness, reliability, or suitability of our services. Use of our Services is at your own risk.</p>
+
+    <h3>Artificial Intelligence Disclaimer</h3>
+    <p>MGXAI provides deterministic attribution integrity Services that capture origination evidence, apply auditable rules, and generate verifiable receipts for attribution, commission, and payout decisions in AI-mediated journeys. Although MGXAI may use AI-assisted development tools, including generative AI and large language models, in limited aspects of development, research, or internal operations, such tools do not govern the core attribution integrity logic or evidentiary decision framework of the Services. Any AI-assisted outputs remain subject to human review before production use. Information is provided "as is," may be updated or changed, and is furnished without warranty of any kind.</p>
+
+    <h3>Attribution Integrity Disclaimer: No Guarantee</h3>
+    <p>MGXAI's AI Crawl Checker and origination evidence capture tools provide assessments based on publicly available signals at the time of analysis. Scores, grades, and confidence ratings are estimates and should not be treated as guarantees of AI platform behavior. AI platforms may change their crawling and indexing behavior at any time without notice.</p>
+    <p>MGXAI does not guarantee attribution integrity outcomes at any time. While our Attribution Integrity Infrastructure is designed to make attribution, commission, and payout decisions more accurate, auditable, and defensible, no system can guarantee perfect attribution across all AI-mediated journeys. Attribution accuracy depends on factors outside MGXAI's control, including AI platform behavior, browser privacy settings, network configurations, and third-party platform changes. Results may vary. MGXAI provides tools and infrastructure, not guaranteed outcomes.</p>
+
+    <h3>No Guarantee of Earnings</h3>
+    <p>MGXAI does not offer or imply any guarantee of earnings, revenue, commissions, or financial results. Success with attribution integrity tools depends on numerous factors, including but not limited to your business model, traffic volume, affiliate program structure, implementation quality, and market conditions. Any examples, case studies, or projections shared through our Services are illustrative only and do not constitute a promise or guarantee of similar results. Past performance is not indicative of future results. Always perform due diligence before making business or financial decisions based on attribution data.</p>
+
+    <h3>Affiliate Disclaimer</h3>
+    <p>MGXAI and affiliated entities may earn commissions through affiliate relationships. Any such relationships will be disclosed at the point of recommendation. Information provided is general in nature and is not intended as legal or financial advice. Always consult a qualified attorney or licensed professional regarding specific business decisions.</p>
+
+    <h3>No Professional Advice</h3>
+    <p>Nothing on this website constitutes legal, financial, tax, or professional advice. MGXAI provides Attribution Integrity Infrastructure and related tools. For legal or financial decisions, consult a qualified professional.</p>
+
+    <!-- 12. TERMS OF SERVICE -->
+    <h2 id="tos">12. Terms of Service</h2>
+
+    <h3>Agreement &amp; Acceptance of Terms</h3>
+    <p>By accessing or using the website at try.mgx.ai, its tools, API services, community features, social media channels, or participating in any programs, services, or activities associated with MGXAI, you acknowledge that you have read, understood, and agree to be legally bound by these Terms of Service. If you do not agree to these Terms, in whole or in part, you must not access the website, participate in any programs, or engage with any offerings or services provided by MGXAI.</p>
+
+    <h3>No Client Relationship</h3>
+    <p>Use of this website or its free resources, including the AI Crawl Checker, community discussions, blog content, and any publicly available tools, does not create a client, consulting, or professional services relationship with MGXAI Attribution Integrity Holdings LLC, MGXAI Attribution Integrity LLC, or any affiliated entity. Such a relationship is only formed through a formal written agreement for paid services. No user should interpret content on this site as a substitute for professional services or engagements. This provision applies equally to individual users, agencies, affiliate marketers, adTech networks, and any other party accessing MGXAI Services.</p>
+
+    <h3>Formal Engagement</h3>
+    <p>"Formally engaged" refers to any instance in which an individual or entity has acknowledged and accepted the terms outlined in this document, whether explicitly or implicitly, through their interaction with this website, its functionality, affiliated platforms, or through written, verbal, or electronic communication. This includes, but is not limited to: initiating communication; submitting inquiries; requesting, scheduling, or receiving services; and/or providing any form of payment to MGXAI. Formal engagement shall be deemed to occur when compensation has been rendered or a paid service has been requested. By doing so, the individual or entity agrees to be bound by the terms, disclaimers, and conditions set forth in this document. No exceptions will be granted outside of written agreement.</p>
+
+    <h3>Compliance with Laws</h3>
+    <p>Users of MGXAI Services must comply with all applicable laws, rules, and regulations, including, but not limited to, the Federal Trade Commission (FTC) Act, the Federal Communications Commission (FCC) rules, the General Data Protection Regulation (GDPR), the California Consumer Privacy Act (CCPA), the CAN-SPAM Act, and any other applicable federal, state, or international privacy and data protection laws. Users are solely responsible for ensuring their actions do not violate these laws, rules, and regulations. Failure to comply may result in immediate termination of access to Services and possible legal action.</p>
+
+    <h3>Service Tiers &amp; Payments</h3>
+    <p>MGXAI offers paid service tiers processed through Stripe. All payments are subject to Stripe's terms of service. By completing a purchase, you agree to the pricing and terms associated with the selected tier at the time of purchase. Subscription services may be cancelled at any time through the provided account management channels. Refund eligibility is determined on a case-by-case basis. MGXAI does not store credit card numbers, bank account details, or other payment instrument data. All payment processing is handled by Stripe (PCI DSS Level 1 certified).</p>
+
+    <h3>Agency &amp; Partner Services</h3>
+    <p>MGXAI may provide Attribution Integrity Infrastructure services to creative agencies, affiliate agencies, adTech networks, and other professional partners. All agency and partner engagements are initiated upon mutual consent and governed by separate written agreements between MGXAI and the respective agency or partner. No agency or partner relationship is created through use of this website or its publicly available tools. Agency and partner services may include, but are not limited to, origination evidence capture, verifiable receipt generation, and attribution integrity reporting customized for the partner's specific use case.</p>
+    <p>Professionals engaged through agency or partner agreements are subject to the terms of their respective agreements in addition to this document.</p>
+
+    <h3>Individual Affiliate Marketer Tracking</h3>
+    <p>MGXAI may provide specific assigned tracking capabilities for individual affiliate marketers. These tracking tools are intended for the affiliate marketer's own personal use in connection with their affiliate activities and are subject to the following conditions:</p>
+    <ul>
+        <li>Assigned tracking identifiers are personal to the individual affiliate marketer and may not be shared, transferred, or reassigned without written approval from MGXAI</li>
+        <li>Tracking data generated through assigned identifiers is the property of MGXAI but may be accessed by the assigned affiliate marketer through approved channels and privacy-preserving exports limited to permitted fields</li>
+        <li>Individual affiliate marketers are responsible for their own compliance with FTC disclosure requirements, GDPR, CCPA, and all other applicable laws governing affiliate marketing activities</li>
+        <li>MGXAI reserves the right to revoke assigned tracking at any time for violations of these Terms of Service or applicable law</li>
+    </ul>
+
+    <h3>Acceptable Use &amp; Prohibited Conduct</h3>
+    <p>You agree not to use our Services to:</p>
+    <ul>
+        <li>Violate any applicable law, rule, or regulation</li>
+        <li>Attempt to gain unauthorized access to our systems, data, or infrastructure</li>
+        <li>Interfere with or disrupt the operation of our Services or the servers and networks connected to them</li>
+        <li>Submit false, misleading, or fraudulent information to any MGXAI tool or endpoint</li>
+        <li>Use automated systems, bots, or scrapers to access our Services in a manner that exceeds reasonable use or circumvents rate limits</li>
+        <li>Attempt prompt injection, input manipulation, adversarial payloads, or any form of attack against our API endpoints, AI tools, or agentic systems</li>
+        <li>Engage in any fraudulent, abusive, or manipulative behavior in connection with MGXAI Services</li>
+        <li>Reverse engineer, decompile, or disassemble any component of the MGXAI platform or its underlying technology</li>
+        <li>Use MGXAI Services to compete directly with MGXAI or to build a substantially similar product or service</li>
+        <li>Misrepresent your identity, affiliation, or the purpose of your use of our Services</li>
+    </ul>
+    <p>Violation of these terms may result in immediate termination of access and, where applicable, legal action.</p>
+
+    <h3>Use of Brand Assets</h3>
+    <p>The MGXAI name, logo, and all associated brand assets are the property of MGXAI Attribution Integrity Holdings LLC. Any use of MGXAI brand assets must receive prior written approval. Unauthorized use or misuse of MGXAI brand assets is strictly prohibited and may result in termination of access and legal action.</p>
+
+    <h3>Intellectual Property &amp; Patent-Pending Notice</h3>
+    <p>All content, code, branding, methodology, and intellectual property associated with MGXAI, including but not limited to the MGXAI name, the term "Attribution Integrity Infrastructure," the origination evidence capture methodology, the verifiable receipt framework, the AI Crawl Checker tool, and all documentation, blog content, and community resources, are the property of MGXAI Attribution Integrity Holdings LLC. Unauthorized use, reproduction, distribution, or creation of derivative works is prohibited without prior written consent. Proprietary information used in digital products and services may be copyrighted.</p>
+    <div class="patent-notice">
+    <p><strong>PATENT-PENDING NOTICE</strong></p>
+    <p>The systems, methods, processes, and technologies underlying MGXAI's Attribution Integrity Infrastructure are patent-pending. This includes, but is not limited to, the methods and systems for: generating referral carriers; capturing origination evidence; canonicalizing identifiers; recording cryptographic commitments; reconciling outcomes; generating verifiable receipts for AI-mediated discovery; and providing privacy-preserving exports limited to permitted fields.</p>
+    <p>Any unauthorized use, reproduction, reverse engineering, decompilation, disassembly, or creation of derivative works based on these patent-pending systems, methods, or processes is strictly prohibited and may result in civil and criminal penalties under applicable United States patent, copyright, and trade secret laws.</p>
+    </div>
+    <p><strong>Trade Secrets:</strong> The algorithms, data structures, processing pipelines, confidence scoring methodologies, and architectural decisions underlying MGXAI's Attribution Integrity Infrastructure constitute trade secrets of MGXAI Attribution Integrity Holdings LLC. Users of the Services agree not to attempt to discover, derive, or reconstruct the underlying source code, algorithms, or methods through any means, including but not limited to reverse engineering, decompilation, disassembly, monitoring of network traffic, or analysis of input/output patterns.</p>
+    <p><strong>Injunctive Relief:</strong> You acknowledge that any unauthorized use, disclosure, or misappropriation of MGXAI's patent-pending technology, trade secrets, or intellectual property would cause irreparable harm to MGXAI for which monetary damages alone would be an inadequate remedy. You therefore agree that MGXAI shall be entitled to seek immediate injunctive or other equitable relief from any court of competent jurisdiction, without the necessity of posting a bond or proving actual damages, in addition to any other remedies available at law or in equity.</p>
+    <p><strong>Reservation of Rights:</strong> All rights not expressly granted to you under these Terms are reserved by MGXAI Attribution Integrity Holdings LLC. No license, right, or interest in any MGXAI trademark, patent, trade secret, or other intellectual property is granted by implication, estoppel, or otherwise through your use of the Services.</p>
+
+    <h3>Third-Party Services</h3>
+    <p>MGXAI Services integrate with and rely upon third-party platforms, including but not limited to:</p>
+    <ul>
+        <li>Stripe for payment processing, subject to Stripe's Terms of Service</li>
+        <li>GitHub for community discussions via Giscus, subject to GitHub's Terms of Service</li>
+        <li>Third-party AI service providers for AI-powered features, subject to each provider's respective terms of use</li>
+    </ul>
+    <p>By using MGXAI Services that interact with these third-party platforms, you acknowledge that you are also subject to the terms and privacy policies of those platforms. MGXAI does not control and is not responsible for the practices of third-party services. MGXAI does not claim ownership of the underlying AI systems provided by third parties.</p>
+
+    <h3>Indemnification</h3>
+    <p>You agree to indemnify, defend, and hold harmless MGXAI Attribution Integrity Holdings LLC, MGXAI Attribution Integrity LLC, and their respective officers, directors, employees, partners, agents, and licensors from and against any and all claims, liabilities, damages, losses, costs, and expenses (including reasonable legal and accounting fees) arising out of or in any way related to: (a) your violation of these Terms of Service; (b) your use or misuse of MGXAI Services; (c) your violation of any applicable law, regulation, or third-party right; or (d) any content or data you submit to or through the Services.</p>
+
+    <h3>Limitation of Liability</h3>
+    <p>To the maximum extent permitted by applicable law, MGXAI Attribution Integrity Holdings LLC and MGXAI Attribution Integrity LLC shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation loss of profits, data, use, goodwill, or other intangible losses, resulting from: (a) your access to, use of, or inability to access or use the Services; (b) any conduct or content of any third party on the Services; (c) any content obtained from the Services; or (d) unauthorized access, use, or alteration of your transmissions or content. Our total aggregate liability for any claim arising from or related to these Terms or the Services shall not exceed the total amount you paid to MGXAI in the twelve (12) months immediately preceding the event giving rise to the claim.</p>
+
+    <h3>Disclaimer of Warranties</h3>
+    <p>MGXAI Services are provided "as is" and "as available" without warranties of any kind, whether express or implied, including but not limited to implied warranties of merchantability, fitness for a particular purpose, and non-infringement. MGXAI does not warrant that the Services will be uninterrupted, error-free, or completely secure. MGXAI does not warrant the accuracy, reliability, or completeness of any information provided through the Services, including AI-generated outputs, crawlability scores, or attribution assessments.</p>
+
+    <h3>Termination</h3>
+    <p>MGXAI reserves the right to suspend or terminate any user's access to the Services at any time, with or without notice, for conduct that MGXAI believes violates these Terms of Service, is harmful to other users, or is harmful to the business interests of MGXAI or any third party. Upon termination, your right to use the Services ceases immediately. Provisions that by their nature should survive termination, including but not limited to indemnification, limitation of liability, intellectual property, and dispute resolution, shall survive.</p>
+
+    <h3>Dispute Resolution</h3>
+    <p>Any dispute arising from or relating to these Terms of Service or the Services shall first be attempted to be resolved through good-faith negotiation between the parties. If the dispute cannot be resolved through negotiation within thirty (30) days, either party may pursue resolution through binding arbitration in accordance with the rules of the American Arbitration Association (AAA), conducted in the State of Florida. Each party shall bear its own costs of arbitration unless the arbitrator determines otherwise.</p>
+
+    <h3>Severability</h3>
+    <p>If any provision of these Terms of Service is found to be unenforceable or invalid by a court of competent jurisdiction, that provision shall be limited or eliminated to the minimum extent necessary so that the remaining provisions of these Terms shall remain in full force and effect.</p>
+
+    <h3>Entire Agreement</h3>
+    <p>These Terms of Service, together with the Privacy Policy and Disclaimers set forth in this document, constitute the entire agreement between you and MGXAI regarding the use of the Services, and supersede all prior or contemporaneous communications, proposals, and agreements, whether electronic, oral, or written, between you and MGXAI with respect to the Services.</p>
+
+    <h3>Governing Law</h3>
+    <p>These Terms are governed by and construed in accordance with the laws of the State of Michigan, United States, without regard to conflict of law principles. You consent to the exclusive jurisdiction of the state and federal courts located in the State of Michigan for the resolution of any disputes not subject to arbitration.</p>
+
+    <h3>Changes to Terms</h3>
+    <p>MGXAI Attribution Integrity Holdings LLC, MGXAI Attribution Integrity LLC, and authorized administrators reserve the right to update these Terms of Service, Privacy Policy, and Disclaimers at any time. Material changes will be posted to this page with an updated effective date. We will make reasonable efforts to notify active users of material changes via email or service notification. Continued use of our Services after changes are posted constitutes acceptance of the updated terms. It is your responsibility to review these Terms regularly to stay informed of any changes.</p>
+
+    <!-- 13. CONTACT -->
+    <h2 id="contact">13. Contact &amp; Data Inquiries</h2>
+    <p>MGXAI operates as a fully remote organization. We do not maintain a physical office location. All work, services, and communications are conducted remotely.</p>
+
+    <div class="entity-box">
+        <p><strong>MGXAI</strong></p>
+        <p>All Inquiries: <a href="mailto:Ops@MGX.AI">Ops@MGX.AI</a></p>
+    </div>
+
+    <!-- 14. ACCESSIBILITY -->
+    <h2 id="accessibility">14. Accessibility</h2>
+
+    <p>MGXAI is committed to ensuring that our Services are accessible to all users, including individuals with disabilities. We strive to conform to the <strong>Web Content Accessibility Guidelines (WCAG) 2.2 Level AA</strong> standards as published by the World Wide Web Consortium (W3C).</p>
+
+    <h3>Our Accessibility Commitment</h3>
+    <p>We actively work to ensure our website and tools are accessible by:</p>
+    <ul>
+        <li><strong>Keyboard Navigation:</strong> All interactive elements on try.mgx.ai are navigable via keyboard-only input. We conduct manual reviews testing keyboard-only navigation across all pages.</li>
+        <li><strong>Screen Reader Compatibility:</strong> Our pages are tested with assistive technologies including NVDA and VoiceOver to ensure compatibility with screen readers used by visually impaired users.</li>
+        <li><strong>Automated Accessibility Testing:</strong> We use automated accessibility checking tools to identify and resolve common accessibility issues on an ongoing basis.</li>
+        <li><strong>Semantic HTML:</strong> Our pages use semantic HTML elements, proper heading hierarchy, ARIA labels, and alt text to support assistive technologies.</li>
+        <li><strong>Color Contrast:</strong> We maintain sufficient color contrast ratios throughout our interface to support users with low vision or color blindness.</li>
+    </ul>
+
+    <h3>Alternative Formats</h3>
+    <p>If you have difficulty accessing any content on try.mgx.ai, we are happy to assist:</p>
+    <ul>
+        <li><strong>PDF Versions:</strong> Upon request, we can provide PDF versions of this Privacy Policy, Terms of Service, Disclaimers, and other important documents so that accessible readers and screen readers can process the content more effectively.</li>
+        <li><strong>Large Print / High Contrast:</strong> Upon request, we can provide documents in large print or high contrast formats for users who are visually impaired or hearing impaired and rely on visual text.</li>
+        <li><strong>Plain Language Summaries:</strong> Upon request, we can provide plain language summaries of our policies for users who may benefit from simplified versions.</li>
+    </ul>
+    <p>To request any alternative format, contact us at <a href="mailto:Ops@MGX.AI">Ops@MGX.AI</a> with the subject line "Accessibility Request."</p>
+
+    <h3>Accessibility Preference Widget</h3>
+    <p>MGXAI deploys the Sienna Accessibility Widget, an open-source, client-side accessibility tool that gives visitors control over text scaling, color contrast, motion reduction, and keyboard focus visibility. This widget helps satisfy presentation-layer accessibility requirements under WCAG.</p>
+    <p><strong>Data Practices:</strong> The Sienna widget operates entirely within the visitor's browser. It does not collect, transmit, or store personal data. It does not deploy cookies, tracking pixels, or fingerprinting techniques. No visitor information is sent to Sienna, MGXAI, or any third party through this widget.</p>
+    <p><strong>Script Delivery:</strong> The widget is loaded via the jsDelivr content delivery network (<code>cdn.jsdelivr.net</code>). jsDelivr is an open-source CDN that serves the script file; standard HTTP request logs (IP address, timestamp, user agent) may be processed by jsDelivr under their own privacy policy. No additional external connections are initiated by the widget.</p>
+    <p><strong>Scope:</strong> This widget provides visitor-facing preference controls. It does not modify underlying source code or substitute for structural WCAG compliance, which MGXAI addresses separately through semantic HTML, proper heading hierarchy, alt text, ARIA labeling, and keyboard navigation built into the site itself.</p>
+
+    <h3>Feedback</h3>
+    <p>We welcome feedback on the accessibility of MGXAI Services. If you encounter any accessibility barriers or have suggestions for improvement, please contact us at <a href="mailto:Ops@MGX.AI">Ops@MGX.AI</a>. We take all accessibility feedback seriously and will respond within 10 business days.</p>
+
+    <p class="effective-date"><strong>Effective Date:</strong> April 14, 2026 &nbsp;|&nbsp; <strong>Last Updated:</strong> April 14, 2026</p>
+
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-logo">MGXAI</div>
+        <ul class="footer-links">
+            <li><a href="https://try.mgx.ai">Home</a></li>
+            <li><a href="https://try.mgx.ai/tools/ai-crawl-checker.html">AI Crawl Checker</a></li>
+            <li><a href="https://try.mgx.ai/tools/discussions.html">Community</a></li>
+            <li><a href="https://try.mgx.ai/tools/discussions.html#reviews">Reviews</a></li>
+            <li><a href="https://try.mgx.ai#request-access">Request Access</a></li>
+        </ul>
+        <div class="footer-copy">&copy;2022-2026 MGXAI - Attribution Integrity. All rights reserved. AI-assisted development</div>
+    </div>
+</footer>
+
+<!-- ── COOKIE CONSENT BANNER ─────────────────── -->
+<style>
+  .mgxai-consent-banner{position:fixed;bottom:0;left:0;right:0;background:#111;color:#e0e0e0;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px;z-index:10000;font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:14px;line-height:1.5;box-shadow:0 -2px 12px rgba(0,0,0,.4);transform:translateY(100%);transition:transform .4s ease}
+  .mgxai-consent-banner.visible{transform:translateY(0)}
+  .mgxai-consent-banner a{color:#d4a017;text-decoration:underline;text-underline-offset:2px}
+  .mgxai-consent-banner a:hover{color:#f0b429}
+  .mgxai-consent-text{flex:1;margin-right:12px}
+  .mgxai-consent-buttons{display:flex;align-items:center;gap:10px;flex-shrink:0}
+  .mgxai-consent-btn{padding:8px 20px;border-radius:4px;font-size:13px;font-weight:600;cursor:pointer;transition:all .2s ease;white-space:nowrap;letter-spacing:.02em}
+  .mgxai-btn-decline{background:transparent;border:1px solid #555;color:#ccc}
+  .mgxai-btn-decline:hover{border-color:#999;color:#fff}
+  .mgxai-btn-accept{background:#fff;border:1px solid #fff;color:#111}
+  .mgxai-btn-accept:hover{background:#d4a017;border-color:#d4a017;color:#111}
+  .mgxai-btn-close{background:none;border:none;color:#999;font-size:20px;cursor:pointer;padding:4px 8px;line-height:1;transition:color .2s ease}
+  .mgxai-btn-close:hover{color:#fff}
+  @media(max-width:640px){.mgxai-consent-banner{flex-direction:column;padding:16px 18px;gap:14px}.mgxai-consent-text{margin-right:0;font-size:13px}.mgxai-consent-buttons{width:100%;justify-content:flex-end}}
+</style>
+<div class="mgxai-consent-banner" id="mgxaiConsentBanner" role="dialog" aria-label="Cookie consent">
+  <div class="mgxai-consent-text">We use cookies on our website to see how you interact with it. By accepting, you agree to our use of such cookies. <a href="https://try.mgx.ai/privacy.html" target="_blank" rel="noopener">Privacy Policy</a>.</div>
+  <div class="mgxai-consent-buttons">
+    <button class="mgxai-consent-btn mgxai-btn-decline" id="mgxaiDecline">Decline</button>
+    <button class="mgxai-consent-btn mgxai-btn-accept" id="mgxaiAccept">Accept</button>
+    <button class="mgxai-btn-close" id="mgxaiClose" aria-label="Close consent banner">&times;</button>
+  </div>
+</div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+(function(){
+  "use strict";
+  function gC(n){var m=document.cookie.match(new RegExp("(^| )"+n+"=([^;]+)"));return m?m[2]:null}
+  function sC(n,v,d){var e="";if(d){var dt=new Date();dt.setTime(dt.getTime()+(d*864e5));e="; expires="+dt.toUTCString()}document.cookie=n+"="+v+e+"; path=/; SameSite=Lax"}
+  var c=gC("mgxai_consent");
+  if(c==="true"){window.dispatchEvent(new Event("mgxai-consent-granted"));return}
+  if(c==="false"){return}
+  var b=document.getElementById("mgxaiConsentBanner");
+  setTimeout(function(){b.classList.add("visible")},800);
+  document.getElementById("mgxaiAccept").addEventListener("click",function(){sC("mgxai_consent","true",365);b.classList.remove("visible");window.dispatchEvent(new Event("mgxai-consent-granted"));setTimeout(function(){b.remove()},500)});
+  document.getElementById("mgxaiDecline").addEventListener("click",function(){sC("mgxai_consent","false",365);b.classList.remove("visible");setTimeout(function(){b.remove()},500)});
+  document.getElementById("mgxaiClose").addEventListener("click",function(){sC("mgxai_consent","false",365);b.classList.remove("visible");setTimeout(function(){b.remove()},500)});
+})();
+</script>
+
+<!-- ── VISITOR ACTIVITY TRACKING (consent-gated) ── -->
+<script>
+(function(){
+  "use strict";
+  function trackVisit(){
+    var journeyId = null;
+    try {
+      journeyId = localStorage.getItem("mgxai_journey_id");
+      if(!journeyId){
+        journeyId = "jrn_" + Date.now().toString(36) + "_" + Math.random().toString(36).substr(2,9);
+        localStorage.setItem("mgxai_journey_id", journeyId);
+      }
+    } catch(e){ journeyId = "jrn_no_storage"; }
+    var sessionId = "ses_" + Date.now().toString(36) + "_" + Math.random().toString(36).substr(2,9);
+    var params = new URLSearchParams(window.location.search);
+    var utmSource = params.get("utm_source") || "";
+    var utmMedium = params.get("utm_medium") || "";
+    var utmCampaign = params.get("utm_campaign") || "";
+    var width = window.innerWidth;
+    var deviceType = "desktop";
+    if(width <= 480){ deviceType = "mobile"; }
+    else if(width <= 1024){ deviceType = "tablet"; }
+    var ua = navigator.userAgent;
+    var browser = "Unknown";
+    if(ua.indexOf("Firefox") > -1){ browser = "Firefox"; }
+    else if(ua.indexOf("Edg") > -1){ browser = "Edge"; }
+    else if(ua.indexOf("Chrome") > -1){ browser = "Chrome"; }
+    else if(ua.indexOf("Safari") > -1){ browser = "Safari"; }
+    else if(ua.indexOf("Opera") > -1 || ua.indexOf("OPR") > -1){ browser = "Opera"; }
+    var os = "Unknown";
+    if(ua.indexOf("Mac") > -1){ os = "macOS"; }
+    else if(ua.indexOf("Win") > -1){ os = "Windows"; }
+    else if(ua.indexOf("Linux") > -1){ os = "Linux"; }
+    else if(ua.indexOf("Android") > -1){ os = "Android"; }
+    else if(ua.indexOf("iPhone") > -1 || ua.indexOf("iPad") > -1){ os = "iOS"; }
+    var payload = {
+      page_viewed: window.location.pathname,
+      page_title: document.title,
+      referrer: document.referrer || "",
+      utm_source: utmSource,
+      utm_medium: utmMedium,
+      utm_campaign: utmCampaign,
+      device_type: deviceType,
+      browser: browser,
+      operating_system: os,
+      screen_resolution: screen.width + "x" + screen.height,
+      language: navigator.language || "",
+      session_id: sessionId,
+      journey_id: journeyId,
+      local_time: new Date().toISOString(),
+      timezone: Intl.DateTimeFormat().resolvedOptions().timeZone || ""
+    };
+    fetch("https://mgxai.onrender.com/page-visit", {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify(payload),
+      keepalive: true
+    }).catch(function(err){
+      console.log("MGXAI tracking: ", err);
+    });
+  }
+  window.addEventListener("mgxai-consent-granted", trackVisit);
+})();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/sienna-accessibility@latest/dist/sienna-accessibility.umd.js" defer></script>
+<script>
+(function(){
+  var c="#922F39";
+  var o=new MutationObserver(function(){
+    var b=document.querySelector(".asw-menu-btn");
+    var h=document.querySelector(".asw-menu-header");
+    if(b){b.style.setProperty("bottom","50%","important");b.style.setProperty("transform","translateY(50%)","important");b.style.setProperty("background","linear-gradient(96deg,"+c+" 0,"+c+" 100%)","important");b.style.setProperty("outline","5px solid "+c,"important");}
+    if(h){h.style.setProperty("background-color",c,"important");}
+    if(b&&h){o.disconnect();}
+  });
+  o.observe(document.body,{childList:true,subtree:true});
+})();
+</script>
+</body>
+</html>

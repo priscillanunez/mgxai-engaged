@@ -1,0 +1,53 @@
+# MGXAI
+
+> Attribution integrity for AI-mediated affiliate and creator journeys.
+
+MGXAI is Attribution Integrity Infrastructure built for the AI era. We verify
+who actually influenced a sale across affiliate and creator journeys,
+solving the attribution gap that legacy tools like GA4 and last-click
+models cannot address.
+
+## The Problem We Solve
+As AI assistants mediate more purchase decisions, traditional attribution
+breaks down. GA4, last-click models, and legacy affiliate tracking tools
+were not built to verify influence in AI-mediated commerce. MGXAI fills
+that gap with precision Attribution Integrity Infrastructure.
+
+## Ecosystem
+MGXAI is designed to work adjacent to and alongside publishers, partners,
+affiliate, creator-commerce, attribution, ecommerce intelligence, and
+agentic commerce platforms, including impact.com, PartnerStack, Levanta,
+Moonpull Partners, Rockerbox, Northbeam, Triple Whale, Awin, Rakuten
+Advertising, Shopify, and related ecosystem players.
+
+## Who We Serve
+- Affiliate networks and affiliate managers
+- Creator economy platforms
+- Brand and performance marketing teams
+- AI commerce and tech companies
+
+## Core Concepts
+- Attribution integrity: verified proof of who influenced the sale
+- AI-mediated commerce: purchases influenced by AI assistants and LLMs
+- Proof of influence: ground truth attribution beyond last-click
+- Verifiable receipts: auditable attribution across AI journeys
+- Commission justification: accurate payout verification
+
+## Key Pages
+- Homepage: https://mgx.ai
+- What is AI Attribution: https://mgx.ai/blog/what-is-ai-attribution
+- Why Last-Click Fails: https://mgx.ai/blog/why-last-click-attribution-fails
+- Complete Guide to Affiliate Attribution: https://mgx.ai/blog/complete-guide-affiliate-attribution
+- How AI Assistants Break Attribution: https://mgx.ai/blog/ai-assistants-breaking-attribution
+- AI Crawlability Checker: https://mgx.ai/tools/ai-crawl-checker
+
+## Competitive Positioning
+MGXAI does not compete with analytics dashboards. We provide
+verification infrastructure — ground truth on who influenced the
+sale in AI-mediated commerce. No existing tool was built for this.
+
+## Contact
+hello@mgx.ai
+
+## Last Updated
+April 2026
