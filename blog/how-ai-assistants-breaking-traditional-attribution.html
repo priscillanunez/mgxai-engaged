@@ -142,6 +142,7 @@
             .article-body th, .article-body td { padding: 0.5rem; }
         }
     </style>
+<style>.asw-menu-btn{bottom:50% !important;transform:translateY(50%) !important;}</style>
 </head>
 <body>
 
@@ -506,6 +507,20 @@
   // Fires immediately if consent was already given (returning visitor)
   // Or fires when they click Accept (new visitor)
   window.addEventListener("mgxai-consent-granted", trackVisit);
+})();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/sienna-accessibility@latest/dist/sienna-accessibility.umd.js" defer></script>
+<script>
+(function(){
+  var c="#922F39";
+  var o=new MutationObserver(function(){
+    var b=document.querySelector(".asw-menu-btn");
+    var h=document.querySelector(".asw-menu-header");
+    if(b){b.style.setProperty("bottom","50%","important");b.style.setProperty("transform","translateY(50%)","important");b.style.setProperty("background","linear-gradient(96deg,"+c+" 0,"+c+" 100%)","important");b.style.setProperty("outline","5px solid "+c,"important");}
+    if(h){h.style.setProperty("background-color",c,"important");}
+    if(b&&h){o.disconnect();}
+  });
+  o.observe(document.body,{childList:true,subtree:true});
 })();
 </script>
 </body>
