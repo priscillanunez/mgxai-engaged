@@ -3,20 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Community Discussions — MGXAI</title>
+  <title>LinkedIn Community Discussions — Agentic AI Architecture®</title>
   <meta name="description" content="Join the MGXAI community. Ask questions about AI attribution, crawlability, and affiliate tracking.">
   <meta name="robots" content="index, follow">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "DiscussionForumPosting",
+    "@type": "CollectionPage",
     "name": "MGXAI Community Discussions",
+    "description": "Community discussions, reviews, and LinkedIn insights on AI attribution integrity and AI-mediated commerce.",
     "url": "https://try.mgx.ai/tools/discussions.html",
-    "author": [{
+    "author": {
       "@type": "Organization",
-      "name": "MGXAI - Attribution Integrity",
-      "url": "https://try.mgx.ai"
-    }]
+      "name": "MGXAI Attribution Integrity",
+      "url": "https://try.mgx.ai",
+      "sameAs": [
+        "https://www.linkedin.com/company/mgxai/",
+        "https://github.com/priscillanunez/mgxai-engaged"
+      ]
+    },
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "SocialMediaPosting",
+          "position": 1,
+          "headline": "MGXAI — Attribution Integrity for AI-Mediated Commerce",
+          "author": {
+            "@type": "Organization",
+            "name": "MGXAI Attribution Integrity"
+          },
+          "url": "https://www.linkedin.com/feed/update/urn:li:share:7452428395377885185"
+        }
+      ]
+    }
   }
   </script>
   <style>
@@ -32,6 +52,7 @@
     .cat-card h3 { font-size: 14px; font-family: Calibri, sans-serif; font-weight: 600; margin: 0 0 0.3rem; color: #1a1a1a; }
     .cat-card p { font-size: 12px; color: #7a8394; font-family: Calibri, sans-serif; margin: 0; line-height: 1.5; }
     .cat-card.reviews-card { border-left: 4px solid #d4a017; background: #fffdf5; }
+    .cat-card.linkedin-card { border-left: 4px solid #0a66c2; background: #f8fbff; }
     .discussion-wrap { max-width: 860px; margin: 0 auto 4rem; padding: 0 1.5rem; }
     .discussion-wrap h2 { font-size: 18px; margin-bottom: 1rem; color: #1a1a1a; border-bottom: 1px solid #e0ddd5; padding-bottom: 0.5rem; font-family: Calibri, sans-serif; }
     footer { text-align: center; padding: 2rem; font-family: Calibri, sans-serif; font-size: 12px; color: #7a8394; border-top: 1px solid #e0ddd5; }
@@ -44,7 +65,8 @@
       <a href="https://try.mgx.ai">Home</a>
       <a href="https://try.mgx.ai/tools/ai-crawl-checker.html">AI Checker</a>
       <a href="https://try.mgx.ai/tools/discussions.html">Community</a>
-      <a href="https://try.mgx.ai/tools/discussions.html#reviews">Reviews</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#linkedin">LinkedIn</a>
       <a href="https://try.mgx.ai/privacy.html">Privacy</a>
     </div>
   </nav>
@@ -75,6 +97,10 @@
       <h3>MGXAI Attribution Integrity Reviews</h3>
       <p>Share your experience with MGXAI tools and attribution integrity. Honest reviews help the community.</p>
     </div>
+    <div class="cat-card linkedin-card">
+      <h3><a href="#linkedin" style="color: #1a1a1a; text-decoration: none;">MGXAI on LinkedIn</a></h3>
+      <p>Insights on attribution integrity, AI-mediated commerce, and the creator economy.</p>
+    </div>
   </div>
 
   <div class="discussion-wrap" id="reviews">
@@ -95,6 +121,17 @@
       crossorigin="anonymous"
       async>
     </script>
+  </div>
+
+  <div class="discussion-wrap" id="linkedin">
+    <h2>MGXAI on LinkedIn</h2>
+    <p style="font-size: 13px; color: #7a8394; font-family: Calibri, sans-serif; margin: 0 0 1.2rem;">Insights on attribution integrity, AI-mediated commerce, and the creator economy.</p>
+    <div style="display: flex; justify-content: center;">
+      <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7452428395377885185?collapsed=1" height="400" width="100%" style="max-width: 504px; border: 1px solid #e0ddd5; border-radius: 8px;" frameborder="0" allowfullscreen="" title="MGXAI LinkedIn post" loading="lazy"></iframe>
+    </div>
+    <p style="text-align: center; margin-top: 1.5rem;">
+      <a href="https://www.linkedin.com/company/mgxai/" target="_blank" rel="noopener" style="color: #0a66c2; text-decoration: none; font-weight: 600; font-family: Calibri, sans-serif; font-size: 14px;">Follow MGXAI on LinkedIn &rarr;</a>
+    </p>
   </div>
 
   <div class="discussion-wrap">
@@ -162,10 +199,7 @@
 <script>
 (function(){
   "use strict";
-
-  // This function collects all 18 data points and sends them to the API
   function trackVisit(){
-    // ── Journey ID (persistent across visits via localStorage) ──
     var journeyId = null;
     try {
       journeyId = localStorage.getItem("mgxai_journey_id");
@@ -174,23 +208,15 @@
         localStorage.setItem("mgxai_journey_id", journeyId);
       }
     } catch(e){ journeyId = "jrn_no_storage"; }
-
-    // ── Session ID (unique per page load) ──
     var sessionId = "ses_" + Date.now().toString(36) + "_" + Math.random().toString(36).substr(2,9);
-
-    // ── UTM parameters ──
     var params = new URLSearchParams(window.location.search);
     var utmSource = params.get("utm_source") || "";
     var utmMedium = params.get("utm_medium") || "";
     var utmCampaign = params.get("utm_campaign") || "";
-
-    // ── Device type ──
     var width = window.innerWidth;
     var deviceType = "desktop";
     if(width <= 480){ deviceType = "mobile"; }
     else if(width <= 1024){ deviceType = "tablet"; }
-
-    // ── Browser detection ──
     var ua = navigator.userAgent;
     var browser = "Unknown";
     if(ua.indexOf("Firefox") > -1){ browser = "Firefox"; }
@@ -198,16 +224,12 @@
     else if(ua.indexOf("Chrome") > -1){ browser = "Chrome"; }
     else if(ua.indexOf("Safari") > -1){ browser = "Safari"; }
     else if(ua.indexOf("Opera") > -1 || ua.indexOf("OPR") > -1){ browser = "Opera"; }
-
-    // ── Operating system ──
     var os = "Unknown";
     if(ua.indexOf("Mac") > -1){ os = "macOS"; }
     else if(ua.indexOf("Win") > -1){ os = "Windows"; }
     else if(ua.indexOf("Linux") > -1){ os = "Linux"; }
     else if(ua.indexOf("Android") > -1){ os = "Android"; }
     else if(ua.indexOf("iPhone") > -1 || ua.indexOf("iPad") > -1){ os = "iOS"; }
-
-    // ── Build payload (all 18 data points) ──
     var payload = {
       page_viewed: window.location.pathname,
       page_title: document.title,
@@ -225,24 +247,15 @@
       local_time: new Date().toISOString(),
       timezone: Intl.DateTimeFormat().resolvedOptions().timeZone || ""
     };
-
-    // ── Send to API ──
-    // Note: IP Hash, City, Region, Country are captured server-side (not from browser)
-    // That makes 15 from JavaScript + 4 from server = 19 total (Timestamp is server-side too)
     fetch("https://mgxai.onrender.com/page-visit", {
       method: "POST",
       headers: {"Content-Type": "application/json"},
       body: JSON.stringify(payload),
       keepalive: true
     }).catch(function(err){
-      // Silent fail — tracking should never break the site
       console.log("MGXAI tracking: ", err);
     });
   }
-
-  // ── Listen for consent ──
-  // Fires immediately if consent was already given (returning visitor)
-  // Or fires when they click Accept (new visitor)
   window.addEventListener("mgxai-consent-granted", trackVisit);
 })();
 </script>
